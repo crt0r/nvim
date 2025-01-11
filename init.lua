@@ -17,7 +17,6 @@ vim.api.nvim_create_autocmd("FileType", {
 	end
 })
 
-
 -- visual hints
 vim.opt.number = true
 vim.opt.syntax = "on"
