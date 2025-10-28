@@ -1,5 +1,5 @@
 -- appearance
-vim.cmd.colorscheme("habamax")
+vim.cmd.colorscheme("zaibatsu")
 
 -- interactivity
 vim.opt.mouse = ""
