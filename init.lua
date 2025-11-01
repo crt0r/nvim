@@ -1,3 +1,5 @@
+require("config.lazy")
+
 config = vim.fn.stdpath("config") .. "/init.lua"
 
 -- interactivity
@@ -8,10 +10,10 @@ vim.keymap.set({ "n", "v" }, "<leader>s", string.format(":source %s<cr>", config
 
 -- indentation
 vim.opt.autoindent = true
-vim.opt.tabstop = 4
 vim.opt.smarttab = true
-vim.opt.softtabstop = 0
 vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
 -- visual hints
@@ -27,12 +29,6 @@ vim.keymap.set({ "n", "v" }, "<leader>d", "\"+d")
 vim.keymap.set({ "n", "v" }, "<leader>D", "\"+D")
 vim.keymap.set({ "n", "v" }, "<leader>p", "\"+p")
 vim.keymap.set({ "n", "v" }, "<leader>P", "\"+P")
-
--- advanced configuration
-require("config.lazy")
-require("kanagawa").setup({
-    transparent = true
-})
 
 -- appearance
 vim.cmd.colorscheme("kanagawa-dragon")
