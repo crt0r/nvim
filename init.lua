@@ -1,7 +1,10 @@
+config = vim.fn.stdpath("config") .. "/init.lua"
+
 -- interactivity
 vim.opt.mouse = ""
 vim.opt.guicursor = ""
 vim.keymap.set({ "n", "v" }, "<leader>o", ":Oil<cr>")
+vim.keymap.set({ "n", "v" }, "<leader>s", string.format(":source %s<cr>", config))
 
 -- indentation
 vim.opt.autoindent = true
