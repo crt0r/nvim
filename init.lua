@@ -1,6 +1,3 @@
--- appearance
-vim.cmd.colorscheme("zaibatsu")
-
 -- interactivity
 vim.opt.mouse = ""
 vim.opt.guicursor = ""
@@ -30,4 +27,9 @@ vim.keymap.set({ "n", "v" }, "<leader>P", "\"+P")
 
 -- advanced configuration
 require("config.lazy")
+require("kanagawa").setup({
+    transparent = true
+})
 
+-- appearance
+vim.cmd.colorscheme("kanagawa-dragon")
